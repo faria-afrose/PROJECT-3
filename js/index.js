@@ -1,11 +1,12 @@
+
 //header
 window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
   header.classList.toggle("sticky");
 });
+//header ends
 
-// card
-
+// card for menu(first) starts
 data1.forEach((element, i) => {
   const main = document.querySelector(".card-container ");
 
@@ -25,26 +26,34 @@ data1.forEach((element, i) => {
  </div>
 </div>
 `;
-  card.innerHTML += makeHtml;
 
+  card.innerHTML += makeHtml;
   main.appendChild(card);
 });
-//breakfast onclick button
-// var cardIndex = 0;
+// card for menu(first) ends
 
-function breakfast_img() {
-  //   data1.forEach((element, i) => {
-  //     //   $(".div-x").empty();
-  //     card.innerHTML = "";
-  //   });
+//(cards )on click button starts
 
-  data2.forEach((element, i) => {
-    const main2 = document.querySelector(".card-container ");
+const main2 = document.querySelector(".card-container ");
+const btn1 = document.querySelector(".btn-class");
+const btn2 = document.querySelector("#btn2");
+btn2.addEventListener("click", function (e) {
+  window.location.href = "";
+});
+let c = 0;
+btn1.addEventListener("click", function (e) {
+  if ((e.target.id = "btn")) {
+    c++;
 
-    const card2 = document.createElement("div");
-    card2.classList = "div-x col-lg-4  col-md-6 col-sm-12 mb-5 m-lg-0";
+    if (c === 1) {
+      main2.innerHTML = "";
+      btn1.style.backgroundColor = "#eb401eca";
 
-    const makeHtml = ` 
+      data2.forEach((element, i) => {
+        const card2 = document.createElement("div");
+        card2.classList = "div-x col-lg-4  col-md-6 col-sm-12 mb-5 m-lg-0";
+
+        const makeHtml = ` 
 
 <div class='card'>
   <img  class= 'card-img-top' src= ${data2[i].image} alt="t-img">
@@ -57,8 +66,16 @@ function breakfast_img() {
  </div>
 </div>
 `;
-    card2.innerHTML += makeHtml;
+        card2.innerHTML += makeHtml;
 
-    main2.appendChild(card2);
-  });
-}
+        main2.appendChild(card2);
+      });
+    } else if (c === 2) {
+      //   window.history.back();
+      window.location.href = "";
+
+      c = 0;
+    }
+  }
+});
+//(cards )on click button ends
