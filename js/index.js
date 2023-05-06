@@ -1,21 +1,20 @@
-
 //header
 window.addEventListener("scroll", function () {
   var header = document.querySelector("header");
   header.classList.toggle("sticky");
 });
 //header ends
+const main = document.querySelector(".card-container ");
 
 // card for menu(first) starts
 data1.forEach((element, i) => {
-  const main = document.querySelector(".card-container ");
-
   const card = document.createElement("div");
-  card.classList = "div-x col-lg-4  col-md-6 col-sm-12 mb-5 m-lg-0";
+  card.classList = " div-x col-lg-4  col-md-6 col-sm-12 mb-5 m-lg-0  ";
 
   const makeHtml = ` 
 
 <div class='card'>
+<div class='card-id'>
   <img  class= 'card-img-top' src= ${data1[i].image} alt="t-img">
 
 <div class="card-body">
@@ -25,8 +24,18 @@ data1.forEach((element, i) => {
 
  </div>
 </div>
+</div>
 `;
+  data1.forEach((element, i) => {
+    var cards = document.querySelectorAll(" .card-id");
+    cards.forEach((card) => {
+      card.addEventListener("click", () => {
+        console.log(`You clicked on the third card (${i.title})`);
 
+        window.location.href = element.href;
+      });
+    });
+  });
   card.innerHTML += makeHtml;
   main.appendChild(card);
 });
@@ -56,6 +65,7 @@ btn1.addEventListener("click", function (e) {
         const makeHtml = ` 
 
 <div class='card'>
+<div class='card-id2'>
   <img  class= 'card-img-top' src= ${data2[i].image} alt="t-img">
 
 <div class="card-body">
@@ -65,7 +75,20 @@ btn1.addEventListener("click", function (e) {
 
  </div>
 </div>
+</div>
 `;
+
+        data2.forEach((element, i) => {
+          var cards2 = document.querySelectorAll(" .card-id2");
+          cards2.forEach((card) => {
+            card.addEventListener("click", () => {
+              console.log(`You clicked on the third card (${i.title})`);
+
+              window.location.href = element.href;
+            });
+          });
+        });
+
         card2.innerHTML += makeHtml;
 
         main2.appendChild(card2);
@@ -79,3 +102,4 @@ btn1.addEventListener("click", function (e) {
   }
 });
 //(cards )on click button ends
+// Import the data from another file
