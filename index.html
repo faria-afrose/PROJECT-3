@@ -21,16 +21,18 @@
     <!-- for location  starts-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <!-- for google map -->
-    <script
-        src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyCfer0LgYhVJj6OIj1pAN4MjarfTwbJ02k"></script>
+    <!-- <script
+        src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyCfer0LgYhVJj6OIj1pAN4MjarfTwbJ02k"></script> -->
 
 </head>
 
 <body>
 
     <div class="contaner">
+        <!-- header starts -->
         <my-header></my-header>
 
+        <!-- header ends -->
         <main>
             <!-- <--home start-->
             <section id="home-id" class="pb-2">
@@ -69,91 +71,91 @@
             <!-- home ends -->
 
 
-        </main>
 
 
 
-        <!-- order-now-parts-starts -->
-        <section id='order-id'>
+            <!-- order-now-parts-starts -->
+            <section id='order-id'>
 
-            <div class="model" id="model">
-                <div class="x">
+                <div class="model" id="model">
+                    <div class="x">
 
-                    <button data-close-button class="close-button">&times;</button>
+                        <button data-close-button class="close-button">&times;</button>
 
-                    <div class="text-center div2">
-                        <h2 class="heading">let's starts ordering</h2>
-                        <p style="font-size: 22px;   line-height: 0.73rem;">How would you like to receive your
-                            order?
-                        </p>
-                        <p style="font-size: 25px; color:#7C7C7C ;">Note:Price may vary based on ordering method</p>
-                    </div>
-
-                    <br>
-
-                    <div class="form-box">
-                        <div class="button-box">
-                            <div id="bug" class="btn b"></div>
-
-                            <button type="button" class="toggle-btn toggle-btn1  "
-                                style="  color: white; padding-right: 5%;" onclick="rightClick()">Delivery</button>
-                            <button type="button" class="toggle-btn toggle-btn2 padding-right: 5%;"
-                                style="color: black;    " onclick="leftClick()">SelfCollect</button>
+                        <div class="text-center div2">
+                            <h2 class="heading">let's starts ordering</h2>
+                            <p style="font-size: 22px;   line-height: 0.73rem;">How would you like to receive your
+                                order?
+                            </p>
+                            <p style="font-size: 25px; color:#7C7C7C ;">Note:Price may vary based on ordering method</p>
                         </div>
-                    </div>
-                    <!-- location part -->
-                    <div class="l-button-box">
-                        <span>
 
-                            <button type="button" class=" location-btn "
-                                style="  color: rgb(0, 0, 0); padding-right: 5%;" onclick="geolocation()">Use my
-                                Current location</button>
-                            <div id="location_name"></div>
-                        </span>
+                        <br>
 
-                    </div>
-                    <!-- location part -->
+                        <div class="form-box">
+                            <div class="button-box">
+                                <div id="bug" class="btn b"></div>
 
-                    <!-- location part -->
-                    <div class="l-button-box " id="search_input" onclick="locationPicker()">
-                        <span>
+                                <button type="button" class="toggle-btn toggle-btn1  "
+                                    style="  color: white; padding-right: 5%;" onclick="rightClick()">Delivery</button>
+                                <button type="button" class="toggle-btn toggle-btn2 padding-right: 5%;"
+                                    style="color: black;    " onclick="leftClick()">SelfCollect</button>
+                            </div>
+                        </div>
+                        <!-- location part -->
+                        <div class="l-button-box">
+                            <span>
 
-                            <!-- <button type=" button" class=" location-btn  "
-                        style="  color: rgba(0, 0, 0, 0.559); padding-right: 5%;" onclick="locationPicker()">
-                        Select a location</button> -->
-                            <button type="button" class=" location-btn "
-                                style="  color: rgba(0, 0, 0, 0.559); padding-right: 5%;" ">Order now
+                                <button type="button" class=" location-btn "
+                                    style="  color: rgb(0, 0, 0); padding-right: 5%;" onclick="geolocation()">Use my
+                                    Current location</button>
+                                <div id="location_name"></div>
+                            </span>
+
+                        </div>
+                        <!-- location part -->
+
+                        <!-- location part -->
+                        <div class="l-button-box " id="search_input" onclick="locationPicker()">
+                            <span>
+
+
+                                <button type="button" class=" location-btn "
+                                    style="  color: rgba(0, 0, 0, 0.559); padding-right: 5%;" ">Select a location
 
                             </button>
-                            <i class=" fa fa-add " style=" margin-left:355px; color: rgba(0, 0, 0, 0.559)"
-                                aria-hidden="true"></i>
+                                            <i class=" fa fa-add " style=" font-weight: 100; font-size: large;
+                                    margin-left:320px; color: rgba(0, 0, 0, 0.265)" aria-hidden="true"></i>
 
-                                <div id="location_name"></div>
-                        </span>
+                                    <div id="location_name"></div>
+                            </span>
 
+                        </div>
+                        <!-- location part -->
                     </div>
-                    <!-- location part -->
                 </div>
-            </div>
-            <div id="overlay"></div>
-    </div>
-    </section>
-    <!-- order-now-parts-ends -->
 
-    </div>
 
-    <!-- order-now-parts-ends -->
-    </div>
-    <!-- container ends -->
+                <div id="overlay"></div>
 
-    <!-- footer stars -->
-    <my-footer></my-footer>
-    <!-- footer ends -->
+            </section>
+            <!-- order-now-parts-ends -->
+
+
+        </main>
+
+        <!-- container ends -->
+
+        <!-- footer stars -->
+        <my-footer></my-footer>
+        <!-- footer ends -->
     </div>
     <script src="./js/data.js"></script>
     <script src="./js/index.js"></script>
     <script src=" ./js/new.js"></script>
     <script src="./js/order.js"> </script>
+    <script src="./js/demo.js"> </script>
+
 </body>
 
 </html>
