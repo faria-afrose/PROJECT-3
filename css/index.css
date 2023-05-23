@@ -736,7 +736,7 @@ footer p {
   top: 88px;
   right: 0;
   height: 100%;
-  display: block;
+  display: none;
   z-index: 50;
   position: absolute;
   justify-content: left;
