@@ -4,6 +4,7 @@ window.addEventListener("scroll", function () {
   header.classList.toggle("sticky");
 });
 //header ends
+
 const main = document.querySelector(".card-container ");
 
 // card for menu(first) starts
