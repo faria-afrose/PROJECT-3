@@ -10,6 +10,7 @@ openModuleButton.forEach((button) => {
   });
 });
 //for closing overlay
+
 overlay.addEventListener("click", () => {
   const models = document.querySelectorAll(".model.active");
   models.forEach((model) => {
@@ -17,17 +18,18 @@ overlay.addEventListener("click", () => {
   });
 });
 
-function openModule(model) {
-  if (model == null) return;
-  model.classList.add("active");
-  overlay.classList.add("active");
-}
 closeModuleButton.forEach((button) => {
   button.addEventListener("click", () => {
     const model = button.closest(".model");
     closeModule(model);
   });
 });
+function openModule(model) {
+  if (model == null) return;
+  model.classList.add("active");
+  overlay.classList.add("active");
+}
+
 function closeModule(model) {
   if (model == null) return;
   model.classList.remove("active");
