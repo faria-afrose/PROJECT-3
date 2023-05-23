@@ -21,7 +21,12 @@ class MyHeader extends HTMLElement {
                             <li class="nav-item"><a class="nav-link" href="offer.html">Offers</a></li>
                             <li class="nav-item"><a class="nav-link" href="reward.html">Rewards</a></li>
 
-                            <li><button class="main-btn">1200 230 25</button></li>
+                            <li><button class="main-btn">Sign up</button></li>
+                                <li> <button class="chart" id="chart-button" onclick="chartClick()"
+            style='width:20px; background-color:transparent; border:none;  padding-right:0px;padding-left:50px;'>
+            <img class="logo" src="./image/logo/cart6.png" alt="img">
+            <p id="count">0</p>
+        </button> </li>
                         </ul>
                     </div>
                 </div>
@@ -114,6 +119,4 @@ class MyFooter extends HTMLElement {
   }
 }
 customElements.define("my-footer", MyFooter);
-//custom footer parts ends
-//custom header part ends
-//custom footer part
+
